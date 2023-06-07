@@ -32,18 +32,12 @@ public class ProjectsView extends Main implements HasComponents, HasStyle {
     public ProjectsView() {
         constructUI();
 
-        imageContainer.add(new ProjectsViewCard("Snow mountains under stars",
-                "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"));
-        imageContainer.add(new ProjectsViewCard("Snow covered mountain",
-                "https://images.unsplash.com/photo-1512273222628-4daea6e55abb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"));
-        imageContainer.add(new ProjectsViewCard("River between mountains",
-                "https://images.unsplash.com/photo-1536048810607-3dc7f86981cb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80"));
-        imageContainer.add(new ProjectsViewCard("Milky way on mountains",
-                "https://images.unsplash.com/photo-1515705576963-95cad62945b6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"));
-        imageContainer.add(new ProjectsViewCard("Mountain with fog",
-                "https://images.unsplash.com/photo-1513147122760-ad1d5bf68cdb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"));
-        imageContainer.add(new ProjectsViewCard("Mountain at night",
-                "https://images.unsplash.com/photo-1562832135-14a35d25edef?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=815&q=80"));
+        imageContainer.add(new ProjectsViewCard("Monopoly","images/monopoly.png", "Monopoly", "2022", "A recreation of the classic board game Monopoly with a Marvel theme. Created for my grade 12 computer science independent study unit.", "Java, Java Swing" ));
+        imageContainer.add(new ProjectsViewCard("Water Purification Detector","", "Water Purification Detector", "2022", "A device that detects the safety of water for drinking, using a light sensor and a ph sensor to determine safety, and a display board to notify the user. Created for my Project Studio course during my first year of university.", "STM32, STM32CubeIDE, CQRobot Ocean Ambient Light Sensor, SPI TFT LCD Display Module, Liquid PH 0-14 Value Sensor Module"));
+        imageContainer.add(new ProjectsViewCard("Snake","images/snake.png", "Snake", "2023", "A recreation of the online game Snake.",  "Java, Java Swing" ));
+        imageContainer.add(new ProjectsViewCard("Website","images/website.png", "Personal Website", "2023", "A personal website to showcase myself, including my skills and projects. A platform to store my achievements for others to view.",  "Java, Spring Boot, Vaadin" ));
+        imageContainer.add(new ProjectsViewCard("Geesespotter", "", "Geesespotter", "2022", "A recreation of the classic game Minesweeper with a goose theme using ASCII. Created for my C++ programming course during my first year of university.",  "C++" ));
+        imageContainer.add(new ProjectsViewCard("Vision", "images/vision.jpg", "Sticker Verifying System", "2023", "A system that verifies the proper placement of stickers onto surfaces using machine vision. Created for the Toyota Innovation Challenge hackathon",  "Python, OpenCV, Orbbec Astra SDK, Orbbec Astra 3D Camera" ));
 
     }
 
@@ -55,16 +49,16 @@ public class ProjectsView extends Main implements HasComponents, HasStyle {
         container.addClassNames(AlignItems.CENTER, JustifyContent.BETWEEN);
 
         VerticalLayout headerContainer = new VerticalLayout();
-        H2 header = new H2("Beautiful photos");
+        H2 header = new H2("Projects");
         header.addClassNames(Margin.Bottom.NONE, Margin.Top.XLARGE, FontSize.XXXLARGE);
-        Paragraph description = new Paragraph("Royalty free photos and pictures, courtesy of Unsplash");
+        Paragraph description = new Paragraph("Made with different programming languages and tools, ranging from the beginning of my journey to my current skill level.");
         description.addClassNames(Margin.Bottom.XLARGE, Margin.Top.NONE, TextColor.SECONDARY);
         headerContainer.add(header, description);
 
         Select<String> sortBy = new Select<>();
         sortBy.setLabel("Sort by");
-        sortBy.setItems("Popularity", "Newest first", "Oldest first");
-        sortBy.setValue("Popularity");
+        sortBy.setItems("Language", "Newest first", "Oldest first");
+        sortBy.setValue("Filter");
 
         imageContainer = new OrderedList();
         imageContainer.addClassNames(Gap.MEDIUM, Display.GRID, ListStyleType.NONE, Margin.NONE, Padding.NONE);

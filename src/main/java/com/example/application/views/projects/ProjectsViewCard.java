@@ -21,7 +21,7 @@ import com.vaadin.flow.theme.lumo.LumoUtility.Width;
 
 public class ProjectsViewCard extends ListItem {
 
-    public ProjectsViewCard(String text, String url) {
+    public ProjectsViewCard(String text, String url, String title, String subt, String desc, String label) {
         addClassNames(Background.CONTRAST_5, Display.FLEX, FlexDirection.COLUMN, AlignItems.START, Padding.MEDIUM,
                 BorderRadius.LARGE);
 
@@ -39,19 +39,19 @@ public class ProjectsViewCard extends ListItem {
 
         Span header = new Span();
         header.addClassNames(FontSize.XLARGE, FontWeight.SEMIBOLD);
-        header.setText("Title");
+        header.setText(title);
 
         Span subtitle = new Span();
         subtitle.addClassNames(FontSize.SMALL, TextColor.SECONDARY);
-        subtitle.setText("Card subtitle");
+        subtitle.setText(subt);
 
         Paragraph description = new Paragraph(
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.");
+                desc);
         description.addClassName(Margin.Vertical.MEDIUM);
 
         Span badge = new Span();
         badge.getElement().setAttribute("theme", "badge");
-        badge.setText("Label");
+        badge.setText(label);
 
         add(div, header, subtitle, description, badge);
 
