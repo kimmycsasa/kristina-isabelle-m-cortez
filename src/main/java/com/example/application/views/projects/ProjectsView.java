@@ -37,7 +37,7 @@ public class ProjectsView extends Main implements HasComponents, HasStyle {
         imageContainer.add(new ProjectsViewCard("Snake","images/snake.png", "Snake", "2023", "A recreation of the online game Snake.",  "Java, Java Swing" ));
         imageContainer.add(new ProjectsViewCard("Website","images/website.png", "Personal Website", "2023", "A personal website to showcase myself, including my skills and projects. A platform to store my achievements for others to view.",  "Java, Spring Boot, Vaadin" ));
         imageContainer.add(new ProjectsViewCard("Geesespotter", "", "Geesespotter", "2022", "A recreation of the classic game Minesweeper with a goose theme using ASCII. Created for my C++ programming course during my first year of university.",  "C++" ));
-        imageContainer.add(new ProjectsViewCard("Vision", "images/vision.jpg", "Sticker Verifying System", "2023", "A system that verifies the proper placement of stickers onto surfaces using machine vision. Created for the Toyota Innovation Challenge hackathon",  "Python, OpenCV, Orbbec Astra SDK, Orbbec Astra 3D Camera" ));
+        imageContainer.add(new ProjectsViewCard("Vision", "images/vision.png", "Sticker Verifying System", "2023", "A system that verifies the proper placement of stickers onto surfaces using machine vision. Created for the Toyota Innovation Challenge hackathon",  "Python, OpenCV, Orbbec Astra SDK, Orbbec Astra 3D Camera" ));
 
     }
 
@@ -51,7 +51,7 @@ public class ProjectsView extends Main implements HasComponents, HasStyle {
         VerticalLayout headerContainer = new VerticalLayout();
         H2 header = new H2("Projects");
         header.addClassNames(Margin.Bottom.NONE, Margin.Top.XLARGE, FontSize.XXXLARGE);
-        Paragraph description = new Paragraph("Made with different programming languages and tools, ranging from the beginning of my journey to my current skill level.");
+        Paragraph description = new Paragraph("Made with different programming languages and tools, ranging from the beginning of my journey to my current skill level. The source code for these projects can be found in my GitHub.");
         description.addClassNames(Margin.Bottom.XLARGE, Margin.Top.NONE, TextColor.SECONDARY);
         headerContainer.add(header, description);
 
