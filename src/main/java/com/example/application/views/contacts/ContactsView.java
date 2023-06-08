@@ -20,10 +20,9 @@ import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.dom.ElementFactory;
 
 
-
 @PageTitle("Contacts")
 @Route(value = "Contacts", layout = MainLayout.class)
-public class ContactsView extends Div {
+public class ContactsView extends VerticalLayout {
 
         private class Contact{
             @Nonnull
@@ -69,12 +68,15 @@ public class ContactsView extends Div {
         Contact outlook = new Contact("Outlook", "kimcorte@uwaterloo.ca", "", "images/outlook.png");
         Contact gmail = new Contact("Gmail", "kisabellecortez@gmail.com", "", "images/gmail.png"); 
 
+        
+
         private ComponentRenderer<Component, Contact> contactCardRenderer = new ComponentRenderer<>(
             contact -> {
 
+                setSizeFull();
+
                 HorizontalLayout cardLayout = new HorizontalLayout();
                 cardLayout.setMargin(true);
-                setSizeFull();
 
                 Avatar avatar = new Avatar(contact.getDomain(),
                 contact.getPic());
@@ -96,7 +98,9 @@ public class ContactsView extends Div {
                         .add(new Details("Link", contactLayout));
 
                 cardLayout.add(avatar, infoLayout);
+ 
                 return cardLayout;
+
 
 
             }
@@ -107,9 +111,10 @@ public class ContactsView extends Div {
             list.setItems(git, link, outlook, gmail);
             list.setRenderer(contactCardRenderer);
             add(list);
+
+
+            
         }
-        
-    //}
 
 
 

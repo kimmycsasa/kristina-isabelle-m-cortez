@@ -20,7 +20,6 @@ import com.vaadin.flow.component.html.H4;
 @PageTitle("Documents")
 @Route(value = "Documents", layout = MainLayout.class)
 public class DocumentsView extends VerticalLayout {
-    private static final long serialVersionUID = 1L;
 
     public DocumentsView() {
 
