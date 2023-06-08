@@ -66,5 +66,5 @@ public class ProjectsView extends Main implements HasComponents, HasStyle {
         container.add(headerContainer, sortBy);
         add(container, imageContainer);
 
-    }
+    }                                                 
 }

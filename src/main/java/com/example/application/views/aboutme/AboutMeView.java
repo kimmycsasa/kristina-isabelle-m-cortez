@@ -16,6 +16,7 @@ import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
 public class AboutMeView extends VerticalLayout {
 
     public AboutMeView() {
+
         setSpacing(false);
 
         Image img = new Image("images/empty-plant.png", "placeholder plant");
@@ -32,6 +33,8 @@ public class AboutMeView extends VerticalLayout {
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
         getStyle().set("text-align", "center");
 
+
     } 
 
 } 
+
